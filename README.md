@@ -24,13 +24,13 @@ mvn clean install
 ### 基本用法
 ```bash
 # 处理单个图片文件
-java -jar photowatermark.jar /path/to/image.jpg
+java -jar target/photo-watermark-tool-1.0.0-jar-with-dependencies.jar /path/to/image.jpg
 
 # 处理目录中的所有图片
-java -jar photowatermark.jar /path/to/image/directory
+java -jar target/photo-watermark-tool-1.0.0-jar-with-dependencies.jar /path/to/image/directory
 
 # 自定义水印参数
-java -jar photowatermark.jar -fontSize 32 -color FF0000 -position center /path/to/image.jpg
+java -jar target/photo-watermark-tool-1.0.0-jar-with-dependencies.jar /path/to/image.jpg -fontSize 32 -color FF0000 -position center
 ```
 
 ### 命令行参数
@@ -44,24 +44,21 @@ java -jar photowatermark.jar -fontSize 32 -color FF0000 -position center /path/t
 ```
 photot_watermark/
 ├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── photowatermark/
-│   │   │           ├── Main.java                 # 主入口类
-│   │   │           ├── core/
-│   │   │           │   ├── ExifReader.java       # EXIF信息读取
-│   │   │           │   ├── ImageProcessor.java   # 图片处理
-│   │   │           │   └── WatermarkGenerator.java # 水印生成
-│   │   │           └── utils/
-│   │   │               ├── FileUtils.java        # 文件工具
-│   │   │               └── ConfigParser.java     # 配置解析
-│   │   └── resources/
-│   └── test/
+│   └── main/
 │       └── java/
+│           └── com/
+│               └── photowatermark/
+│                   ├── Main.java                 # 主入口类
+│                   ├── core/
+│                   │   ├── ExifReader.java       # EXIF信息读取
+│                   │   └── WatermarkGenerator.java # 水印生成
+│                   └── utils/
+│                       ├── FileUtils.java        # 文件工具
+│                       └── ConfigParser.java     # 配置解析
+├── target/
+│   └── photo-watermark-tool-1.0.0-jar-with-dependencies.jar
 ├── pom.xml
 ├── README.md
-├── PRT.md
 └── LICENSE
 ```
 
