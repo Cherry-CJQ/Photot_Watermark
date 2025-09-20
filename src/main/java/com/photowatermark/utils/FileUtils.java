@@ -55,7 +55,7 @@ public class FileUtils {
      * 获取当前日期时间字符串
      */
     public static String getCurrentDateTime() {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         return sdf.format(new Date());
     }
 

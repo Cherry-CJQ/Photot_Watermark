@@ -93,9 +93,9 @@ public class ExifReader {
             SimpleDateFormat exifFormat = new SimpleDateFormat("yyyy:MM:dd HH:mm:ss");
             Date date = exifFormat.parse(exifDateTime);
 
-            // 转换为标准格式: "2023-12-25 14:30:45"
-            SimpleDateFormat standardFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            return standardFormat.format(date);
+            // 转换为年月日格式: "2023-12-25"
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            return dateFormat.format(date);
 
         } catch (Exception e) {
             System.err.println("格式化EXIF时间失败: " + exifDateTime);
